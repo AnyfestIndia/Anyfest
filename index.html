@@ -1,187 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anyfest - Stock Image Platform</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Anyfest - Stock Image Platform</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #111;
-    }
+<style>
 
-    header {
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-    }
+body {
+margin:0;
+font-family:Arial, sans-serif;
+background:#fff;
+color:#111;
+}
 
-    header h1 {
-      font-size: 22px;
-      letter-spacing: 1px;
-    }
+header {
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #eee;
+}
 
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #333;
-      font-size: 14px;
-    }
+header h1 {
+font-size:22px;
+letter-spacing:1px;
+}
 
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-    }
+nav a {
+margin-left:20px;
+text-decoration:none;
+color:#333;
+font-size:14px;
+}
 
-    .hero h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
+.hero {
+text-align:center;
+padding:80px 20px;
+}
 
-    .search-box {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      overflow: hidden;
-    }
+.hero h2 {
+font-size:32px;
+margin-bottom:20px;
+}
 
-    .search-box input {
-      flex: 1;
-      padding: 12px;
-      border: none;
-      outline: none;
-    }
+.search-box {
+max-width:500px;
+margin:auto;
+display:flex;
+border:1px solid #ddd;
+border-radius:6px;
+overflow:hidden;
+}
 
-    .search-box button {
-      padding: 12px 20px;
-      background: black;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
+.search-box input {
+flex:1;
+padding:12px;
+border:none;
+outline:none;
+}
 
-    .categories {
-      text-align: center;
-      margin: 40px 0;
-    }
+.search-box button {
+padding:12px 20px;
+background:black;
+color:white;
+border:none;
+cursor:pointer;
+}
 
-    .categories button {
-      margin: 5px;
-      padding: 8px 16px;
-      border: 1px solid #ddd;
-      background: none;
-      cursor: pointer;
-      border-radius: 20px;
-    }
+.categories {
+text-align:center;
+margin:40px 0;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 20px;
-      padding: 20px 40px;
-    }
+.categories button {
+margin:5px;
+padding:8px 16px;
+border:1px solid #ddd;
+background:none;
+cursor:pointer;
+border-radius:20px;
+}
 
-    .card {
-      background: #f8f8f8;
-      height: 220px;
-      border-radius: 10px;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
+.grid {
+display:grid;
+grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+gap:20px;
+padding:20px 40px;
+}
 
-    .card:hover {
-      transform: scale(1.03);
-    }
+.card {
+background:#f8f8f8;
+height:220px;
+border-radius:10px;
+position:relative;
+overflow:hidden;
+cursor:pointer;
+transition:0.3s;
+}
 
-    .card span {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      font-size: 12px;
-      background: rgba(0,0,0,0.6);
-      color: #fff;
-      padding: 4px 8px;
-      border-radius: 4px;
-    }
+.card:hover {
+transform:scale(1.03);
+}
 
-    .about, .contact {
-      padding: 60px 40px;
-      text-align: center;
-    }
+.card img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      border-top: 1px solid #eee;
-      font-size: 12px;
-    }
-  </style>
+.card span {
+position:absolute;
+bottom:10px;
+left:10px;
+font-size:12px;
+background:rgba(0,0,0,0.6);
+color:#fff;
+padding:4px 8px;
+border-radius:4px;
+}
+
+.about,.contact {
+padding:60px 40px;
+text-align:center;
+}
+
+footer {
+text-align:center;
+padding:20px;
+border-top:1px solid #eee;
+font-size:12px;
+}
+
+</style>
+
 </head>
 
 <body>
 
 <header>
-  <h1>Anyfest</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Explore</a>
-    <a href="#">Categories</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
+<h1>Anyfest</h1>
+<nav>
+<a href="#">Home</a>
+<a href="#">Explore</a>
+<a href="#">Categories</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-  <h2>EVERY. SINGLE. ONE.</h2>
-  <p>Discover visuals, ideas, and stories</p>
+<h2>EVERY. SINGLE. ONE.</h2>
+<p>Discover visuals, ideas, and stories</p>
 
-  <div class="search-box">
-    <input type="text" placeholder="Search images, designs, ideas...">
-    <button>Search</button>
-  </div>
+<div class="search-box">
+<input type="text" placeholder="Search images, designs, ideas...">
+<button>Search</button>
+</div>
 </section>
 
 <section class="categories">
-  <button>Business</button>
-  <button>Festival</button>
-  <button>Corporate</button>
-  <button>Lifestyle</button>
-  <button>Abstract</button>
+<button>Business</button>
+<button>Festival</button>
+<button>Corporate</button>
+<button>Lifestyle</button>
+<button>Abstract</button>
 </section>
 
 <section class="grid">
-  <div class="card"><span>Image 1</span></div>
-  <div class="card"><span>Image 2</span></div>
-  <div class="card"><span>Image 3</span></div>
-  <div class="card"><span>Image 4</span></div>
-  <div class="card"><span>Image 5</span></div>
-  <div class="card"><span>Image 6</span></div>
+
+<div class="card">
+<img src="Anyfest-01.png">
+<span>Anyfest</span>
+</div>
+
+<div class="card">
+<img src="Anyfest-01.png">
+<span>Creative</span>
+</div>
+
+<div class="card">
+<img src="Anyfest-01.png">
+<span>Business</span>
+</div>
+
+<div class="card">
+<img src="Anyfest-01.png">
+<span>Festival</span>
+</div>
+
+<div class="card">
+<img src="Anyfest-01.png">
+<span>Abstract</span>
+</div>
+
+<div class="card">
+<img src="Anyfest-01.png">
+<span>Corporate</span>
+</div>
+
 </section>
 
 <section class="about">
-  <h2>About Anyfest</h2>
-  <p>
-    Anyfest is a creative platform celebrating EVERY. SINGLE. ONE. through visuals,
-    design, and storytelling. Built for creators and explorers.
-  </p>
+<h2>About Anyfest</h2>
+<p>
+Anyfest is a creative platform celebrating EVERY. SINGLE. ONE.
+through visuals, design, and storytelling.
+Built for creators and explorers.
+</p>
 </section>
 
 <section class="contact">
-  <h2>Contact</h2>
-  <p>Email: hello@anyfest.com</p>
+<h2>Contact</h2>
+<p>Email: hello@anyfest.com</p>
 </section>
 
 <footer>
-  © 2026 Anyfest. All rights reserved.
+© 2026 Anyfest. All rights reserved.
 </footer>
 
 </body>
